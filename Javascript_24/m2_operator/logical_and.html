@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Logical Operator Demo</title>
+<script>
+	document.write(true && true, "<br>");  		// true
+	document.write(true && false, "<br>");		// false
+	document.write(false && true, "<br>"); 		// false
+	document.write(false && false, "<br>");		// false
+	document.write(true && (1==1), "<br>");		// true
+	document.write(false && 'A', "<br>");		// false
+	document.write('A' && false, "<br>");		// false
+	document.write(true && 'A', "<br>");		// A
+	document.write('A' && true, "<br>");		// true
+	document.write('A' && 'B', "<br>");			// B
+
+
+	var x;
+	document.write( x && 'B', "<br>");	//undefined
+	document.write( 'A' && x, "<br>");  //undefined
+	var y = null;
+	document.write( y && 'B', "<br>"); 	//null
+	document.write( 'A' && y, "<br>");	//null
+
+</script>
+</head>
+</html> 

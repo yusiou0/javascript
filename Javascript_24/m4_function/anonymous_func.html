@@ -7,12 +7,20 @@
 	var toCelsius = function(fahrenheit) {
 		return (5/9) * (fahrenheit-32);
 	}
-	document.write(toCelsius(120) + "<br>");
+	document.write(toCelsius(120).toFixed(2) + "<br>");
 	
 	function test(func, val) {
-		return func(val);
+		return func(val).toFixed(2);
 	}	
 	document.write(test(toCelsius, 130));
+
+
+
+	function test(func, val) {
+		return func(val).toFixed(2);
+	}	//不給完整的參數會出現NaN ，沒給參數會是undifined >> 再去跟其他內容做運算就會變成NaN
+	document.write(test(toCelsius));
+
 </script>
 </head>
 </html>

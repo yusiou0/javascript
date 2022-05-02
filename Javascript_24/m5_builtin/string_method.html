@@ -6,14 +6,20 @@
 <script>
 	var str = "Hello world, welcome to Javascript world.";
 	document.write(str.length,"<br>");					// 41
-	document.write(str.charAt(6),"<br>");				// w
+	document.write(str.charAt(6),"<br>");				// w  ，這是java寫法
+	document.write(str[6],"<br>");						// w  ，這是python寫法
 	document.write(str.substring(6, 11),"<br>");		// world
 	document.write(str.indexOf("world"),"<br>");		// 6
-	document.write(str.indexOf("World"),"<br>"); 		// -1
+	document.write(str.indexOf("world",7 ),"<br>");		//開始從7開始，會抓到第二個world在 35
+	document.write(str.indexOf("World"),"<br>"); 		// -1   //大寫W找不到，回傳-1
 	document.write(str.lastIndexOf("world"),"<br>"); 	// 35
-	document.write(str.replace("Javascript","Java"),"<br>");
-	document.write(str.toLowerCase(),"<br>");
-	document.write(str.toUpperCase(),"<br>");
+	document.write(str.replace("world","xxx"),"<br>");  //只會取代第一個遇到的world
+	document.write(str.toLowerCase(),"<br>");           //字串全部轉小寫
+	document.write(str.toUpperCase(),"<br>");			//字串全部轉大寫
+
+	var hello = '    hello world     ';
+	document.write(hello.trim(),"<br>")   //去掉頭尾空白
+
 	var tokens = str.split(" ");
 	for (let i = 0; i < tokens.length; i++) {
 		document.write(tokens[i],"<br>");

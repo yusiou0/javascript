@@ -18,9 +18,28 @@
 	document.write("現在時間是 " + hour + ":" + minute + ":" + second,"<br>");
 	document.write("現在時間的毫秒數 " + now.getTime(),"<br>");
 	
+
+	//運用字串把day變數串聯起來
+	var weekdays = ["日","一","二","三","四","五","六"];
+	document.write("今天是星期 " +weekdays[day],"<br>");
+
+	//往後算日子
 	var next5 = new Date();
 	next5.setDate(now.getDate()+5);
 	document.write(next5,"<br>");
+
+	var before = new Date(1651472467394);
+	document.write(before,"<br>");
+
+	//往前算日子
+	var before3 = new Date();
+	before3.setDate(now.getDate()-3);
+	document.write(before3,"<br>");
+
+
+	//用相減的方式找出毫秒差義
+	document.write(now - before,"<br>"); 
+
 </script>
 </head>
 </html>

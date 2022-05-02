@@ -5,7 +5,7 @@
 <title>Array Demo</title>
 <script>
 	var names = ["Tom", "Mary", "John"];
-	document.write(names, "<br>");
+	document.write(names, "<br>");  				//JS可以直接印出陣列，會用逗點隔開
 	document.write("------------------------<br>");
 	
 	for (let i = 0; i < names.length; i++)
@@ -19,6 +19,13 @@
 	var names1 = ["Tom",, "Mary", "John"];
 	for (let i = 0; i < names1.length; i++)
 		document.write("names1[" + i + "] = " + names1[i] + "<br>");
+
+	document.write("------------------------<br>");
+	
+	for (let i in names1)  										//會跳過undefined
+		document.write("names[", i, "] = ", names1[i], "<br>");
+
+
 </script>
 </head>
 </html>
